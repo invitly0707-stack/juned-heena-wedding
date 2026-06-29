@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heena ❤️ Juned - Shadi ki Dawat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="bismillah.mp3.mpeg" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="music-control">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <div id="invitation-overlay" class="overlay">
+        <div class="envelope-wrapper">
+            <div class="lantern-left"><i class="fas fa-fan"></i></div>
+            <div class="lantern-right"><i class="fas fa-fan"></i></div>
+            <div class="envelope-card">
+                <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+                <p class="arabic-sub">"Bismillahir Rahmanir Raheem"</p>
+                <div class="divider"><i class="fas fa-star-and-crescent"></i></div>
+                <p class="invitation-text">Allah Ta'ala ke fazl o karam se hum aap ko apni khushiyon mein shareek hone ki dawat dete hain.</p>
+                <h1 class="couple-title animate-pulse">Juned <span class="heart">❤️</span> Heena</h1>
+                <p class="invitation-text card-footer-text">Aap ki tashreef aawari hamare liye baais-e-masarrat hogi.</p>
+                <button id="open-card-btn" class="gold-btn">Dawat Nama Kholien</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden-content">
+
+        <section class="hero-section">
+            <div class="hero-overlay-pattern"></div>
+            <div class="hero-content glass-panel">
+                <p class="hero-sub">Shadi Ki Pur-Masarrat Taqreeb</p>
+                <h2 class="hero-names">Juned & Heena</h2>
+                <div class="gold-line"></div>
+                <p class="quran-verse">"Aur Humne tumhein jodon mein paida kiya." <br><span>(Surah An-Naba, 78:8)</span></p>
+            </div>
+        </section>
+
+        <section class="countdown-section">
+            <div class="section-title-wrap">
+                <h3 class="section-title">Nikah Ka Waqt</h3>
+                <p class="section-subtitle">19 July 2026</p>
+            </div>
+            <div class="timer-container glass-panel">
+                <div class="time-box"><span id="days">00</span><p>Din</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Ghante</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Mint</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Sec</p></div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h3 class="section-title">Taqareeb Ki Tafseelat</h3>
+            <div class="timeline">
+                
+                <div class="event-card glass-panel">
+                    <div class="event-icon"><i class="fas fa-mortar-pestle"></i></div>
+                    <h4>Haldi Ceremony</h4>
+                    <p class="event-date"><i class="far fa-calendar-alt"></i> 18 July 2026</p>
+                    <p class="event-time"><i class="far fa-clock"></i> Baad Namaz-e-Zohar</p>
+                    <p class="event-venue"><i class="fas fa-map-marker-alt"></i> Anas Villa, Gandhi Nagar, Ujjain</p>
+                    <div class="card-divider"></div>
+                    <p class="event-desc">"Haldi ki is khoobsurat rasam mein aap ki shirkat hamare liye khushi ka sabab hogi."</p>
+                </div>
+
+                <div class="event-card glass-panel">
+                    <div class="event-icon"><i class="fas fa-hands"></i></div>
+                    <h4>Mehndi Ceremony</h4>
+                    <p class="event-date"><i class="far fa-calendar-alt"></i> 18 July 2026</p>
+                    <p class="event-time"><i class="far fa-clock"></i> Baad Namaz-e-Isha</p>
+                    <p class="event-venue"><i class="fas fa-map-marker-alt"></i> Anas Villa, Gandhi Nagar, Ujjain</p>
+                    <div class="card-divider"></div>
+                    <p class="event-desc">"Mehndi ki rangeen shaam mein aap ko dil se khush aamdeed."</p>
+                </div>
+
+                <div class="event-card glass-panel highlighted-card">
+                    <div class="event-icon gold-glow"><i class="fas fa-scroll"></i></div>
+                    <h4>Nikah Ceremony</h4>
+                    <p class="event-desc-top">"Allah Ta'ala ke mubarak naam ke saath hum apne Nikah ki pur khuloos dawat pesh karte hain."</p>
+                    
+                    <div class="scratch-container-outer">
+                        <p class="scratch-instruction"><i class="fas fa-hand-pointer animate-bounce"></i> Is card ko scratch karein venue dekhne ke liye</p>
+                        <div class="scratch-container" id="scratch-card-box">
+                            <div class="scratch-reveal-content">
+                                <p class="revealed-date">📅 19 July 2026</p>
+                                <p class="revealed-time">🕐 Baad Namaz-e-Zohar</p>
+                                <p class="revealed-venue">📍 Hussaini Hall, Ring Road Near KD Gate</p>
+                            </div>
+                            <canvas id="scratch-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card glass-panel walima">
+                    <div class="event-icon"><i class="fas fa-utensils"></i></div>
+                    <h4>Walima / Reception</h4>
+                    <p class="event-date"><i class="far fa-calendar-alt"></i> 20 July 2026</p>
+                    <p class="event-time"><i class="far fa-clock"></i> Baad Namaz-e-Zohar</p>
+                    <p class="event-venue"><i class="fas fa-map-marker-alt"></i> Anas Villa, Gandhi Nagar, Ujjain</p>
+                    <div class="card-divider"></div>
+                    <p class="event-desc">"Reception ki pur takalluf mehfil mein aap ki tashreef aawari hamare liye izzat ka baais hogi."</p>
+                </div>
+
+            </div>
+        </section>
+
+       <section class="dua-section glass-panel">
+            <div class="lantern-decor"><i class="fas fa-mosque"></i></div>
+            <h3>Pyaare Bhanje aur Bhanji Ki Iltija</h3>
+            
+            <div class="gold-line"></div>
+            
+            <div class="special-shayari">
+                <p class="shayari-line">"Khushiyo ki raat hogi jashn jra htky hoga..."</p>
+                <p class="shayari-line">"Mere mamu ki shaadi me andaaz jra htky hoga!"</p>
+                <p class="kids-names">- Amayra and Daniyal khan</p>
+            </div>
+            
+            
+        </section>
+
+        <footer class="thank-you-section">
+            <p class="final-msg">"Hum dil ki gehrayiyon se muntazir hain ke aap hamari khushiyon mein shareek hon aur apni duaaon se nawazein."</p>
+            <div class="footer-signature">
+                <p class="footer-couple">Heena & Juned</p>
+                <p class="shukriya">Shukriya!</p>
+            </div>
+            <div class="invitly-footer">
+                <p>Design by <span class="brand-name">Invitly Elite</span> with ❤️</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
